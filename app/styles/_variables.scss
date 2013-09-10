@@ -1,0 +1,32 @@
+//
+// Variables
+// --------------------------------------------------
+$navbarBackground: #ecf0f1;
+$navbarSearchBackground: #fff;
+$btnPrimaryBackgroundHighlight: #bdc3c7;
+$btnPrimaryBackground: #7f8c8d;
+
+//FontAwesome
+
+$FontAwesomePath: "./fonts" !default;
+$FontAwesomeVersion: "3.2.1" !default;
+$borderColor: #eeeeee !default;
+$iconMuted: #eeeeee !default;
+$iconLight: white !default;
+$iconDark: #333333 !default;
+$icons-li-width: (30em/14);
+
+//Flat UI Bottom Menu
+$base: $text-color;
+$baseFontSize: $font-size-base;
+$rwdContainerSpace: 20px;
+
+$firm:      $btn-primary-bg;
+
+$lightgray: $gray-light;
+$inverse:   white;
+
+$success:   #2ecc71;
+$danger:    #e74c3c;
+$warning:   #f1c40f;
+$info:      #3498db;

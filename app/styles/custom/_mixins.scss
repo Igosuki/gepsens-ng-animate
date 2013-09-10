@@ -1,0 +1,13 @@
+@mixin nice-square {
+  input {
+    font-size: 30px;
+    margin-left: 2px;
+  }
+  width: 50%; 
+  text-align: center;
+  @include border-radius(10px);
+}
+
+@mixin round-corners  ($top-radius: 0, $bottom-radius: 0) {
+  border-radius: $top-radius $top-radius $bottom-radius $bottom-radius; 
+}

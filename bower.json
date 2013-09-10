@@ -1,0 +1,37 @@
+{
+  "name": "gepsens-mean",
+  "version": "0.0.0",
+  "devDependencies": {
+    "angular-mocks": "1.2.0-rc.1",
+    "angular-scenario": "1.2.0-rc.1"
+  },
+  "dependencies": {
+    "angular": "1.2.0-rc.1",
+    "json3": "~3.2.4",
+    "jquery": "~1.9.1",
+    "flat-ui-official": "latest",
+    "es5-shim": "~2.0.8",
+    "gepsens-utils": "https://github.com/Igosuki/gepsens-ng-utils.git#master",
+    "angular-resource": "1.2.0-rc.1",
+    "angular-cookies": "1.2.0-rc.1",
+    "angular-sanitize": "1.2.0-rc.1",
+    "angular-route": "1.2.0-rc.1",
+    "angular-animate": "1.2.0-rc.1",
+    "angular-i18n": "1.2.0-rc.1",
+    "angular-loader": "1.2.0-rc.1",
+    "angular-ui": "latest",
+    "angular-bootstrap": "https://github.com/angular-ui/bootstrap.git#gh-pages",
+    "angular-ui-utils": "https://github.com/angular-ui/ui-utils.git#01c3ed6c8e47560bc57a04a0d628290c7d4fcebe",
+    "angular-ui-router": "latest",
+    "d3": "latest",
+    "angular-ui-select2": "latest",
+    "underscore": "latest",
+    "restangular": "latest",
+    "bootstrap-sass":"https://github.com/Igosuki/sass-bootstrap.git#master",
+    "font-awesome": "latest",
+    "font-awesome-more": "latest",
+    "ngInfiniteScroll": "latest",
+    "ngprogress": "latest",
+    "angular-promise-tracker": "latest"  
+  }
+}

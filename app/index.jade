@@ -1,0 +1,116 @@
+!!! 5
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7  
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8  
+//if IE 8
+  html.no-js.lt-ie9  
+// [if gt IE 8] <!
+html.no-js
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title GepsensMeanApp
+    meta(name='description', content='Gepsens Mean App')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+
+    // build:css styles/application.css
+    link(rel='stylesheet', href='styles/app.css')
+    // endbuild
+    // build:css styles/main.css
+    link(href='lib/angular-ui/build/angular-ui.css', rel='stylesheet')
+    // endbuild
+    script(src='http://localhost:35729/livereload.js')
+
+  body(ng-app='meanApp', ng-controller='MainCtrl')
+    //if lt IE 7
+      p.chromeframe
+        | You are using an outdated browser.
+        a(href='http://browsehappy.com/') Upgrade your browser today
+        | or
+        a(href='http://www.google.com/chromeframe/?redirect=true') install Google Chrome Frame
+        | to better experience this site.
+    //if lt IE 9
+      script(src='lib/es5-shim/es5-shim.js')
+      script(src='lib/json3/lib/json3.min.js')
+    // Add your site or application content here
+    include views/fragments/mainnav
+    .container.main-container
+      .content-wrapper(ng-view='')
+    footer
+      .bottom-menu
+        .container
+          .row
+            .col-xs-3
+              a.navbar-brand(href='#/')
+                i.icon-off GepsensMeanApp
+            .col-xs-3
+              h5.title About Us
+              ul.bottom-links
+                li
+                  a Blog
+                li
+                  a RSS Feeds
+                li
+                  a Store
+            .col-xs-3
+              h5.title The Company
+              ul.bottom-links
+                li
+                  a Contacts
+                li
+                  a Privacy
+                li
+                  a Terms of Use
+            ul.bottom-icons
+              li
+                a(href='#')
+                  i.icon-pinterest
+                a(href='#')
+                  i.icon-facebook
+                a(href='#')
+                  i.icon-twitter
+            span &copy All Right Reserved. Your Company LLC.
+
+    script(src='lib/jquery/jquery.min.js')
+    script(src='lib/underscore/underscore-min.js')
+
+    // build:js({app,app/,../}) scripts/angular.js
+    script(src="lib/angular/angular.js")
+    script(src="lib/angular-resource/angular-resource.js")
+    script(src="lib/angular-cookies/angular-cookies.js")
+    script(src="lib/angular-sanitize/angular-sanitize.js")
+    script(src="lib/angular-route/angular-route.js")
+    script(src="lib/angular-ui-utils/build/ui-utils.js")
+    script(src="lib/angular-bootstrap/ui-bootstrap-0.5.0.js")
+    script(src="lib/angular-loader/angular-loader.js")
+    // endbuild         
+
+    // build:js({app,app/,../}) scripts/libs.js
+    script(src='lib/d3/d3.js')
+    script(src='lib/gepsens-utils/dist/gepsens-tpls-0.3.0-SNAPSHOT.js')
+    script(src='lib/angular-promise-tracker/promise-tracker.min.js')
+    // endbuild 
+    
+    // build:js({.tmp,app}) scripts/app.js
+    script(src='scripts/app.js')
+    script(src='scripts/controllers/_module_controllers.js')
+    script(src='scripts/controllers/auth_controller.js')
+    script(src='scripts/controllers/main_controller.js')
+    script(src='scripts/directives/_module_directives.js')
+    script(src='scripts/directives/capitalize.js')
+    script(src='scripts/directives/nav-menu.js')
+    script(src='scripts/filters/_filters.js')
+    script(src='scripts/services/_module_service.js')
+    script(src='scripts/services/directive-utils_service.js')
+    script(src='scripts/services/errors_service.js')
+    // endbuild
+    
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

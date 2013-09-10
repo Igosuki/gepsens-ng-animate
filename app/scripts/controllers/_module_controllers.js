@@ -1,0 +1,1 @@
+angular.module('meanApp.controllers', ['meanApp.services', 'meanApp.filters', 'ui.utils', 'ui.bootstrap', 'ngResource', 'gepsens']);

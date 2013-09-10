@@ -1,0 +1,40 @@
+.navbar.navbar-default.navbar-static-top(ng-controller='AuthCtrl')
+  .navbar-header
+    a.navbar-brand(href='#/')
+      i.icon-off
+      | Gepsens Mean
+  div(ng-show="!user.isLoggedIn")
+    .collapse.navbar-collapse
+      form.navbar-form.form-inline
+        button.btn.btn-large(style='margin-bottom: 5px;', ng-click='loginOauth("github")')
+          i.icon-github(title='Login with Github')
+        button.btn.btn-large(style='margin-bottom: 5px;', ng-click='loginOauth("facebook")')
+          i.icon-facebook(title='Login with Facebook')
+        button.btn.btn-large(style='margin-bottom: 5px;', ng-click='loginOauth("google")')
+          i.icon-google-plus(title='Login with Google Plus')
+        button.btn.btn-large(style='margin-bottom: 5px;', ng-click='loginOauth("twitter")')
+          i.icon-twitter(title='Login with Twitter')
+        input(type='text', ng-model='login.user', placeholder='Login')
+        input(type='text', ng-model='login.password', placeholder='Password')
+        button.btn.btn-primary(ng-click='login(login)')
+          i.icon-login
+          | Sign In
+  div(ng-show="user.isLoggedIn")
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav(nav-menu='')
+        li
+          a(href='#/profile')
+            span.icon-user
+            span.hidden-tablet.hidden-phone Profile
+      form.navbar-form.navbar-left(role='search')
+        .form-group
+          input.form-control(type='text', placeholder='Search projects')
+      div.navbar-right
+        p.navbar-text
+          a.navbar-link.user-info
+            img.medallion-small(ng-src='{{user.image_url}}')
+            | {{user.login || 'Sign In'}}
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='javascript:void(0)', ng-click='logout()')
+            span.icon-reply(tooltip-placement="right",tooltip="Logout")

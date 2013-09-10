@@ -1,0 +1,12 @@
+---
+
+env:
+  NODE_ENV: production
+
+applications:
+- name: gepsensmean
+  command: NODE_ENV=production node server/server.js
+  buildpack: https://github.com/cloudfoundry/heroku-buildpack-nodejs.git
+  host: gepsensmean
+  domain: cfapps.io
+
