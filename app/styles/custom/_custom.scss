@@ -2,3 +2,32 @@
   display:inline-block;
 }
 
+.main-container {
+	min-height: 800px;
+	& .row {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+}
+
+.range-slider {
+	@include border-radius($default-border-radius);
+	background-color: $btn-info-bg;
+	height: 15px;
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		background-color: $btn-warning-bg;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		padding-top: 3px;
+		color: $btn-warning-color;
+		@include border-radius(20px);
+		@extend .icon-chevron-sign-right;
+	}
+	& ~ .input-group-addon {
+		font-size: $font-size-tiny;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

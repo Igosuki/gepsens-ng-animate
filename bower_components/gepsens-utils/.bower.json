@@ -1,0 +1,21 @@
+{
+  "name": "gepsens-utils",
+  "main": "./gepsens.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/Igosuki/gepsens-ng-utils",
+  "_release": "master",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "be4065b4dbbd885055ceb79218f1c5ba250c7f59"
+  },
+  "_source": "https://github.com/Igosuki/gepsens-ng-utils.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/Igosuki/gepsens-ng-utils.git"
+}

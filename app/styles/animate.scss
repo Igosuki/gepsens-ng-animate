@@ -1,0 +1,9 @@
+@import "compass";
+@import "twbs_variables";
+@import "animate/perspective";
+
+.animations-frame-container {
+	> div,section {
+		margin: 0px auto;
+	}
+}

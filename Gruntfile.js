@@ -38,11 +38,11 @@ module.exports = function (grunt) {
         tasks: ['coffee:test']
       },
       jade: {
-        files: ['<%= yeoman.app %>/**/{,*/}*.jade'],
+        files: ['<%= yeoman.app %>/**/{,*/}*.jade', '<%= yeoman.app %>/**/*.jade'],
         tasks: ['jade']
       },
       compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}','<%= yeoman.app %>/lib/**/{,*/}*.{scss,sass}'],
+        files: ['<%= yeoman.app %>/styles/**/{,*/}*.{scss,sass}','<%= yeoman.app %>/lib/**/{,*/}*.{scss,sass}'],
         tasks: ['compass:server']
       },
       livereload: {

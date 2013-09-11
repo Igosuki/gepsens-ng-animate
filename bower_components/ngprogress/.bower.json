@@ -1,0 +1,22 @@
+{
+  "name": "ngprogress",
+  "version": "1.0.1",
+  "main": "build/ngProgress.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/VictorBjelkholm/ngProgress",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "98afe1d4e81dce9783c01b9fcb8a4e6dc39b6cac"
+  },
+  "_source": "git://github.com/VictorBjelkholm/ngProgress.git",
+  "_target": "*",
+  "_originalSource": "ngprogress"
+}

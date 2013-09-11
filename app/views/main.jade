@@ -1,6 +1,40 @@
-html
-	body
+include mixins/forms
+.row(ng-controller="AnimationsController")
+	.col-sm-12
 		.row
-			.col-sm-12
-				.h1.text-center
-					| Welcome to your MEAN Seed, start hacking !
+			.animations-frame-container
+				.persp-container.base-frame
+			//- .animations-frame-container
+			//- 	section.persp-small-container
+			//- 		figure.small-frame(ng-repeat="frame in smallFrames")
+						//"ng-style"="{'perspective-origin': frame.origin.x+' '+frame.origin.y}"
+		.row
+			.col-sm-6
+				.animations-frame-container
+					section.persp-small-container(ng-style="{'perspective': perspective, 'perspective-origin': perspectiveOriginX+'% '+perspectiveOriginY+'%'}")
+						figure.small-frame(ng-repeat="frame in smallFrames", ng-style="{'transform': 'rotateY('+smallRotation+'deg)'}")
+			.col-sm-6
+				div.panel.panel-default.text-center
+					form.form-inline
+						+bs-range("perspective", "Perspective", "0", "1000", "600")
+						+bs-range("perspectiveOriginX", "X Origin", "O", "100", "50")
+						+bs-range("perspectiveOriginY", "Y Origin", "O", "100", "50")
+						+bs-range("smallRotation", "Small Windows Rotation", "O", "360", "45")
+
+		.row
+			.col-sm-6
+				.animations-frame-container
+					section.cube(ng-style="{'perspective': perspective, 'perspective-origin': perspectiveOriginX+'% '+perspectiveOriginY+'%'}", ng-class="{'spin': cubeRotate}")
+						figure.cube-frame(ng-repeat="frame in cubeFrames", ng-style="{'transform': 'rotateX('+frame.rx+'deg) rotateY('+frame.ry+'deg) rotateZ('+frame.rz+'deg) translateZ('+frame.tz+'px)', 'background-color': frame.color}")
+							span.text-center
+								| {{$index + 1}}
+			.col-sm-6
+				div.panel.panel-default.text-center
+					form.form-inline
+						+bs-range("perspective", "Perspective", "0", "1000", "600")
+						+bs-range("perspectiveOriginX", "X Origin", "O", "100", "50")
+						+bs-range("perspectiveOriginY", "Y Origin", "O", "100", "50")
+						+bs-range("smallRotation", "Small Windows Rotation", "O", "360", "45")
+					button.btn.btn-sm.btn-embossed.btn-primary(ng-click="cubeRotate=!cubeRotate", ng-init="cubeRotate = false") Rotate the Cube !
+
+

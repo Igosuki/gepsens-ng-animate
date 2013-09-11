@@ -1,0 +1,62 @@
+
+.base-frame {
+	height:  200px;
+	width: 200px;
+}
+
+.small-frame {
+	height: 50px;
+	width: 50px;
+}
+
+.persp-container {
+	background-color: $brand-info;
+	@include transform(perspective(600px) rotateY(45deg));
+}
+
+.persp-small-container {
+	@extend .base-frame;
+	background-color: $brand-info;
+	padding: 10px;
+	@include perspective(400px);
+	> div,figure {
+		display: block;
+		float: left;
+		margin: 5px;
+		background-color: $brand-warning;
+		@include transform(rotateY(45deg));
+	}
+}
+
+.cube {
+	position: absolute;
+	@include transform(translateZ(-150px));
+	@include transform-style(preserve-3d);
+	@include perspective(600px);
+	height: 100%;
+	width: 100%;
+	&.spin {
+		@include animation(cubicSpin 8s infinite ease-in-out);
+	}
+}
+
+@include keyframes(cubicSpin) {
+  0% {
+    @include transform(translateZ( -100px ) rotateX( 0deg ) rotateY( 0deg ));
+  }
+  100% {
+    @include transform(translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ));
+  }
+}
+
+.cube-frame {
+	position: absolute;
+	display: block;
+	height: 150px;
+	width: 150px;
+	opacity: 0.5;
+	text-align: center;
+	& > span {
+		font-size: 60px;
+	}
+}

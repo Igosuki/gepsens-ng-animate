@@ -1,0 +1,23 @@
+{
+  "name": "sass-bootstrap",
+  "main": [
+    "./dist/js/bootstrap.js",
+    "./dist/css/bootstrap.css"
+  ],
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  },
+  "homepage": "https://github.com/Igosuki/sass-bootstrap",
+  "_release": "master",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "238f3d4fab634ab7d30e59fe8e1b435c8b0ba175"
+  },
+  "_source": "https://github.com/Igosuki/sass-bootstrap.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/Igosuki/sass-bootstrap.git"
+}

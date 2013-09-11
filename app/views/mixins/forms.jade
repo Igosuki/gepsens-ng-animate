@@ -1,0 +1,36 @@
+mixin bs-range(field, title, min, max, value)
+  .form-group
+    label(for=field)= title
+    .input-group
+      input.form-control.range-slider.icon-(name=field, type="range", ng-model=field, min=min, max=max, value=value, ng-init=field+"="+value)
+      span.input-group-addon(ng-bind=field)
+
+mixin label(field, title)
+  label(for=field, class="control-label")= title
+
+mixin password(field, value, required)
+  input.span6(type="password", id=field, name=field, value=value, ng-model=field, required=required)
+
+mixin text(field, value, required)
+  input.span6(type="text", id=field, name=field, value=value, ng-model=field, required=required)
+
+mixin textarea(field, value, required)
+  textarea.span6(id=field, name=field, rows="5", ng-model=field, required=required)= value
+
+mixin number(field, value, required)
+  input.span2(type="number", id=field, name=field, value=value, ng-model=field, required=required)
+
+mixin boolean(field, value, required)
+  input.span1(type="checkbox", id=field, name=field, checked=value, ng-model=field, required=required)
+
+mixin date(field, value, required)
+  input.span2(type="date", id=field, name=field, value=dateAsValue(value), ng-model=field, required=required)
+
+mixin datetime(field, value, required)
+  input.span2(type="datetime", id=field, name=field, value=value, ng-model=field, required=required)
+
+mixin hidden(field, value, required)
+  input.span2(type="hidden", id=field, name=field, value=value, ng-model=field)
+
+mixin errorMessage(model, field)
+  !{errorFor(model, field)}
