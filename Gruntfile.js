@@ -41,9 +41,9 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/**/{,*/}*.jade', '<%= yeoman.app %>/**/*.jade'],
         tasks: ['jade']
       },
-      compass: {
+      sass: {
         files: ['<%= yeoman.app %>/styles/**/{,*/}*.{scss,sass}','<%= yeoman.app %>/lib/**/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server']
+        tasks: ['sass']
       },
       livereload: {
         files: [
@@ -167,7 +167,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    compass: {
+    compassMultiple: {
       options: {
         sassDir: '<%= yeoman.app %>/styles',
         cssDir: '.tmp/styles',
@@ -188,6 +188,17 @@ module.exports = function (grunt) {
           debugInfo: true
         }
       }
+    },
+    sass: {
+        dist: {
+            options: {
+              includePaths: ['app/lib']
+            },
+            files: {
+                '.tmp/styles/app.css': 'app/styles/app.scss',
+                '.tmp/styles/animate.css': 'app/styles/animate.scss',
+            }
+        }
     },
     // not used since Uglify task does concat,
     // but still available if needed
@@ -309,7 +320,7 @@ module.exports = function (grunt) {
         tasks: [
           'coffee:dist',
           'jade:dist',
-          'compass:server',
+          'sass',
           'nodemon', 
           'watch'
         ],
@@ -320,12 +331,12 @@ module.exports = function (grunt) {
       test: [
         'coffee',
         'jade',
-        'compass'
+        'sass'
       ],
       dist: [
         'coffee',
         'jade',
-        'compass:dist',
+        'sass',
         'imagemin',
         'svgmin',
         'htmlmin'
@@ -386,7 +397,7 @@ module.exports = function (grunt) {
     //'jshint',
     'useminPrepare',
     'coffee',
-    'compass:dist',
+    'sass',
     'imagemin',
     'svgmin',
     'htmlmin',

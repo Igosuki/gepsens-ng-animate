@@ -33,8 +33,8 @@
 	@include transform(translateZ(-150px));
 	@include transform-style(preserve-3d);
 	@include perspective(600px);
-	height: 100%;
-	width: 100%;
+	height: 150px;
+	width: 150px;
 	&.spin {
 		@include animation(cubicSpin 8s infinite ease-in-out);
 	}

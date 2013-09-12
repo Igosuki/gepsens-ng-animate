@@ -32,6 +32,7 @@
     "font-awesome-more": "latest",
     "ngInfiniteScroll": "latest",
     "ngprogress": "latest",
-    "angular-promise-tracker": "latest"  
+    "angular-promise-tracker": "latest",
+    "compass-mixins":"latest"  
   }
 }
